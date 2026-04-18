@@ -1,172 +1,208 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
-
-.open-sans-font {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-/* * {
+/* Global Reset - এটি আনকমেন্ট করা হয়েছে যাতে মার্জিন অটো কাজ করে */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
-
-
-/* common style  */
-
-main{
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
-main > section{
-  margin-top: 130px;
+body {
+    font-family: "Open Sans", sans-serif;
 }
 
-.display-flex{
-  display: flex;
-}
-.dark2{
-  color:#424242 ;
-}
-
-.dark3{
-  color:#727272 ;
+.open-sans-font {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.bg-light{
-  background-color:rgba(255, 156, 14, 0.1) ;
-}
-.primary-btn{
-  background-color: orange;
-  color: white;
-  padding: 20px 25px;
-  font-size: 1.25rem;
-  font: weight 600px;
-  border-radius: 8px;
-  border: none;
+/* common style */
+.width {
+    max-width: 1140px; /* আপনার ডিফল্ট উইডথ */
+    width: 100%;
+    margin: 0 auto;
 }
 
+section {
+    margin-bottom: 100px;
+}
+
+main > section {
+    margin-top: 130px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.dark2 {
+    color: #424242;
+}
+
+.dark3 {
+    color: #727272;
+}
+
+.bg-light {
+    background-color: rgba(255, 156, 14, 0.1);
+}
+
+.primary-btn {
+    background-color: orange;
+    color: white;
+    padding: 20px 25px;
+    font-size: 1.25rem;
+    font-weight: 600; /* font: weight 600px ঠিক করা হয়েছে */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 
 /* header styles */
-
-
-/* navbar style */
-.navbar{
-  
-  justify-content: space-between;
-  align-items: center;
-
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0; /* প্যাডিং যোগ করা হয়েছে সৌন্দর্যের জন্য */
 }
 
-
-.nav-item{
-  list-style: none;
-  margin-right: 30px;
-}
-.nav-link{
-  text-decoration: none;
-  font-weight: 500;
-  
+.nav-links {
+    list-style: none;
 }
 
-.navbar, .banner{
-  max-width: 1440px;
-  margin: 0 auto;
+.nav-item {
+    margin-right: 30px;
 }
 
-.brand{
-  font-weight: 700;
-  font-size: 3rem;
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
 }
 
+.navbar, .banner {
+    max-width: 1140px; /* সেকশনের সাথে মিল রেখে ১১৪০ করা হয়েছে */
+    margin: 0 auto;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 3rem;
+}
 
 /* banner styles */
-
-.banner-content{
-  max-width: 850px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 50px;
+header{
+  margin-bottom: 100px;
+}
+.banner-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.banner-title{
-  font-weight: 700;
-  font-size: 4rem;
+.banner-title {
+    font-weight: 700;
+    font-size: 4rem;
 }
 
-.banner-img{
-  width: 100%;
-  border-radius: 8px;
-  opacity: 100%;
-
+.banner-img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-/* tems style */
-.teams{
-  align-items: center;
-}
-.tems-img-container{
-  display: grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap: 24px;
-
+/* teams style */
+.teams {
+    align-items: center;
+    justify-content: center; /* সেন্টার করার জন্য */
 }
 
-.our-feature{
-  max-width: 520px;
-  margin-left: 130px;
-}
-.banner-title{
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-#part2{
-  color: orange;
-}
-.fearure-des{
-  margin: 10px 0;
-
+.tems-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
-
-
-
-
-
-
-
-
-
-/* media style */
-/* header responsive */
-@media screen and (max-width:576px) {
-  .navbar, .nav-links, .teams{
-    flex-direction: column;
-  }
-  .tems-img-container{
-    grid-template-columns: repeat(1,1fr);
-  }
-  .our-feature{
-    
-    margin-left: 20px;
-  }
-  
+.our-feature {
+    max-width: 520px;
+    margin-left: 70px; /* অতিরিক্ত মার্জিন কমিয়ে আনা হয়েছে */
 }
-/* mediamum devices responsive */
-@media screen and(min-width:576px) and (max-width:992px) {
-  .teams{
-    flex-direction: column;
-  }
-  
-  .our-feature{
-    margin: 50px auto;
-  }
+
+#part2 {
+    color: orange;
+}
+
+.fearure-des {
+    margin: 20px 0;
+}
+
+/* some facts style */
+.fact {
+    border: 1px solid orange;
+    width: 240px;
+    height: 200px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* ৯০পিএক্স গ্যাপ অনেক বেশি ছিল, তাই ৩০ করা হয়েছে */
+    margin-top: 50px;
+    justify-items: center; /* গ্রিড কন্টেন্ট মাঝখানে রাখার জন্য */
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 5px auto 10px auto;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* media style - responsive */
+@media screen and (max-width: 576px) {
+    .navbar, .nav-links, .teams {
+        flex-direction: column;
+    }
+    .nav-item {
+        margin: 10px 0;
+    }
+    .tems-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-feature {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .facts-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* medium devices responsive */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .teams {
+        flex-direction: column;
+    }
+    .our-feature {
+        margin: 50px auto;
+        text-align: center;
+    }
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
